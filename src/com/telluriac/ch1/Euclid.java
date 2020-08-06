@@ -14,5 +14,7 @@ public class Euclid {
         StdOut.println(Euclid.gcd(5, 3));
         StdOut.println(Euclid.gcd(1322, 2312));
         StdOut.println(Euclid.gcd(231, 2212));
+        StdOut.println(Euclid.gcd(231, 231));
+        StdOut.println(Euclid.gcd(17, 17));
     }
 }
