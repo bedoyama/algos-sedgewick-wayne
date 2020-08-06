@@ -29,6 +29,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.DS_Store
+
 ### Java template
 # Compiled class file
 *.class
