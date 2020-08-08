@@ -1,4 +1,4 @@
-package com.telluriac.ch1;
+package com.telluriac.ch1.section11;
 
 public class SquareRoot {
     public static double sqrt(double c) {

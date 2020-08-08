@@ -1,6 +1,6 @@
 package com.telluriac;
 
-import com.telluriac.ch1.SquareRoot;
+import com.telluriac.ch1.section11.SquareRoot;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.telluriac.ch1;
+package com.telluriac.ch1.section11;
 
 import com.telluriac.stdlibrary.In;
 import com.telluriac.stdlibrary.StdIn;

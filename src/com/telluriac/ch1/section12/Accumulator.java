@@ -1,4 +1,4 @@
-package com.telluriac.ch1;
+package com.telluriac.ch1.section12;
 
 public class Accumulator {
     private double total;

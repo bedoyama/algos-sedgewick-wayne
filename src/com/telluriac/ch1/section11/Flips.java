@@ -1,16 +1,10 @@
-package com.telluriac.ch1;
+package com.telluriac.ch1.section11;
 
 import com.telluriac.stdlibrary.StdOut;
 import com.telluriac.stdlibrary.StdRandom;
 
-public class FlipsMax
+public class Flips
 {
-    public static Counter max(Counter x, Counter y)
-    {
-        if (x.tally() > y.tally()) return x;
-        else return y;
-    }
-
     public static void main(String[] args)
     {
         int T = Integer.parseInt(args[0]);
@@ -20,8 +14,9 @@ public class FlipsMax
             if (StdRandom.bernoulli(0.5))
                 heads.increment();
             else tails.increment();
-        if (heads.tally() == tails.tally())
-            StdOut.println("Tie");
-        else StdOut.println(max(heads, tails) + " wins");
+        StdOut.println(heads);
+        StdOut.println(tails);
+        long d = heads.tally() - tails.tally();
+        StdOut.println("delta: " + Math.abs(d));
     }
 }

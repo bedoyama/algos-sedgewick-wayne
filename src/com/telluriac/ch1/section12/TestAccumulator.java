@@ -1,4 +1,4 @@
-package com.telluriac.ch1;
+package com.telluriac.ch1.section12;
 
 import com.telluriac.stdlibrary.StdOut;
 import com.telluriac.stdlibrary.StdRandom;
