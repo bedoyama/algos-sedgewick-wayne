@@ -2,9 +2,10 @@ package com.telluriac.ch1.algorithms;
 
 import java.util.Iterator;
 
-public class Stack<Item> implements Iterable<Item>, IStack<Item> {
-    private Node first; // top of stack (most recently added node)
-    private int N; // number of items
+public class Queue<Item> implements Iterable<Item>, IQueue<Item> {
+    private Node first; // link to least recently added node
+    private Node last; // link to most recently added node
+    private int N; // number of items on the queue
 
     private class Node { // nested class to define nodes
         Item item;
@@ -19,18 +20,21 @@ public class Stack<Item> implements Iterable<Item>, IStack<Item> {
         return N;
     }
 
-    public void push(Item item) { // Add item to top of stack.
-        Node oldFirst = first;
-        first = new Node();
-        first.item = item;
-        first.next = oldFirst;
+    public void enqueue(Item item) { // Add item to the end of the list.
+        Node oldlast = last;
+        last = new Node();
+        last.item = item;
+        last.next = null;
+        if (isEmpty()) first = last;
+        else oldlast.next = last;
         N++;
     }
 
-    public Item pop() { // Remove item from top of stack.
+    public Item dequeue() { // Remove item from the beginning of the list.
         Item item = first.item;
         first = first.next;
         N--;
+        if (isEmpty()) last = null;
         return item;
     }
 

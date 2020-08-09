@@ -2,7 +2,7 @@ package com.telluriac.ch1.algorithms;
 
 import java.util.Iterator;
 
-public class ResizingArrayStack<Item> implements Iterable<Item>, Stack<Item> {
+public class ResizingArrayStack<Item> implements Iterable<Item>, IStack<Item> {
     private Item[] a = (Item[]) new Object[1]; // stack items
     private int N = 0; // number of items
 

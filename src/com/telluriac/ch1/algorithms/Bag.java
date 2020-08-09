@@ -2,36 +2,25 @@ package com.telluriac.ch1.algorithms;
 
 import java.util.Iterator;
 
-public class Stack<Item> implements Iterable<Item>, IStack<Item> {
-    private Node first; // top of stack (most recently added node)
-    private int N; // number of items
+public class Bag<Item> implements Iterable<Item>, IBag<Item> {
+    private Node first; // first node in list
 
-    private class Node { // nested class to define nodes
+    private class Node {
         Item item;
         Node next;
     }
 
+    @Override
     public boolean isEmpty() {
         return first == null;
     }
 
-    public int size() {
-        return N;
-    }
-
-    public void push(Item item) { // Add item to top of stack.
-        Node oldFirst = first;
+    @Override
+    public void add(Item item) { // same as push() in Stack
+        Node oldfirst = first;
         first = new Node();
         first.item = item;
-        first.next = oldFirst;
-        N++;
-    }
-
-    public Item pop() { // Remove item from top of stack.
-        Item item = first.item;
-        first = first.next;
-        N--;
-        return item;
+        first.next = oldfirst;
     }
 
     public Iterator<Item> iterator() {
