@@ -11,14 +11,17 @@ public class Stack<Item> implements Iterable<Item>, IStack<Item> {
         Node next;
     }
 
+    @Override
     public boolean isEmpty() {
         return first == null;
     }
 
+    @Override
     public int size() {
         return N;
     }
 
+    @Override
     public void push(Item item) { // Add item to top of stack.
         Node oldFirst = first;
         first = new Node();
@@ -27,11 +30,17 @@ public class Stack<Item> implements Iterable<Item>, IStack<Item> {
         N++;
     }
 
+    @Override
     public Item pop() { // Remove item from top of stack.
         Item item = first.item;
         first = first.next;
         N--;
         return item;
+    }
+
+    @Override
+    public Item peek() {
+        return first.item;
     }
 
     public Iterator<Item> iterator() {
@@ -53,5 +62,18 @@ public class Stack<Item> implements Iterable<Item>, IStack<Item> {
             current = current.next;
             return item;
         }
+    }
+
+    @Override
+    public String toString() {
+        String representation = "";
+
+        for (Item item : this) {
+            representation += item + " ";
+        }
+
+        return "Stack{ top " +
+                representation +
+                ",N=" + N + '}';
     }
 }

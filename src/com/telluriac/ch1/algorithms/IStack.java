@@ -6,6 +6,8 @@ interface IStack<Item> {
 
     Item pop();
 
+    Item peek();
+
     boolean isEmpty();
 
     int size();

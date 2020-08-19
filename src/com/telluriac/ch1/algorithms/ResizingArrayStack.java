@@ -6,10 +6,12 @@ public class ResizingArrayStack<Item> implements Iterable<Item>, IStack<Item> {
     private Item[] a = (Item[]) new Object[1]; // stack items
     private int N = 0; // number of items
 
+    @Override
     public boolean isEmpty() {
         return N == 0;
     }
 
+    @Override
     public int size() {
         return N;
     }
@@ -21,16 +23,23 @@ public class ResizingArrayStack<Item> implements Iterable<Item>, IStack<Item> {
         a = temp;
     }
 
+    @Override
     public void push(Item item) { // Add item to top of stack.
         if (N == a.length) resize(2 * a.length);
         a[N++] = item;
     }
 
+    @Override
     public Item pop() { // Remove item from top of stack.
         Item item = a[--N];
         a[N] = null; // Avoid loitering (see text).
         if (N > 0 && N == a.length / 4) resize(a.length / 2);
         return item;
+    }
+
+    @Override
+    public Item peek() {
+        return a[N - 1];
     }
 
     public Iterator<Item> iterator() {

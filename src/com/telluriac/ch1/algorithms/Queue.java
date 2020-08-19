@@ -58,4 +58,17 @@ public class Queue<Item> implements Iterable<Item>, IQueue<Item> {
             return item;
         }
     }
+
+    @Override
+    public String toString() {
+        String representation = "";
+
+        for (Item item : this) {
+            representation += item + " ";
+        }
+
+        return "Queue{" +
+                representation +
+                ",N=" + N + '}';
+    }
 }
