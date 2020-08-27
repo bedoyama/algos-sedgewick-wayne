@@ -53,7 +53,7 @@ public class UFWeightedQuickUnion implements UF {
     public static void main(String[] args) { // Solve dynamic connectivity problem on StdIn.
         Stopwatch timer = new Stopwatch();
         int N = StdIn.readInt(); // Read number of sites.
-        UF uf = new UFQuickFind(N); // Initialize N components.
+        UF uf = new UFWeightedQuickUnion(N); // Initialize N components.
         while (!StdIn.isEmpty()) {
             int p = StdIn.readInt();
             int q = StdIn.readInt(); // Read pair to connect.
