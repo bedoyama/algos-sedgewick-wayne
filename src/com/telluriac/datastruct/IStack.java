@@ -1,6 +1,6 @@
-package com.telluriac.ch1.algorithms;
+package com.telluriac.datastruct;
 
-interface IStack<Item> {
+public interface IStack<Item> {
 
     void push(Item item);
 

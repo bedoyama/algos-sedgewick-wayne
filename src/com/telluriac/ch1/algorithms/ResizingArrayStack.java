@@ -1,5 +1,7 @@
 package com.telluriac.ch1.algorithms;
 
+import com.telluriac.datastruct.IStack;
+
 import java.util.Iterator;
 
 public class ResizingArrayStack<Item> implements Iterable<Item>, IStack<Item> {

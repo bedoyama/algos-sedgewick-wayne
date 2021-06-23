@@ -1,6 +1,5 @@
 package com.telluriac.datastruct;
 
-import com.telluriac.ch1.algorithms.Bag;
 import com.telluriac.stdlibrary.In;
 
 public class Graph implements IGraph {

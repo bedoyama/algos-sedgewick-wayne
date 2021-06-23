@@ -1,6 +1,6 @@
-package com.telluriac.ch1.algorithms;
+package com.telluriac.datastruct;
 
-interface IQueue<Item> {
+public interface IQueue<Item> {
     boolean isEmpty();
 
     int size();

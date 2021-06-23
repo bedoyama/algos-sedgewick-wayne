@@ -1,5 +1,7 @@
 package com.telluriac.ch1.algorithms;
 
+import com.telluriac.datastruct.IQueue;
+
 import java.util.Iterator;
 
 public class ResizingArrayQueue<Item> implements IQueue<Item> {

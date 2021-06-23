@@ -1,4 +1,4 @@
-package com.telluriac.ch1.algorithms;
+package com.telluriac.datastruct;
 
 public interface IBag<Item> {
     boolean isEmpty();

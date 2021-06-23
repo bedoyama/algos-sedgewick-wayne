@@ -1,7 +1,7 @@
 package com.telluriac.ch1.section13;
 
-import com.telluriac.ch1.algorithms.Queue;
-import com.telluriac.ch1.algorithms.Stack;
+import com.telluriac.datastruct.Queue;
+import com.telluriac.datastruct.Stack;
 import com.telluriac.stdlibrary.StdOut;
 
 public class ReverseQueue {
